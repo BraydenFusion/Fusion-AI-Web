@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fusion AI - Home</title>
+    <title>Responsive Burger Menu</title>
+    <link rel="stylesheet" href="css/style.css/style.css">
+    <link rel="stylesheet" href="css/style.css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page">
+    <div class="background-circle"></div>
+    <div class="page-container">
+        <div class="content-wrap">
+            <div id="navbar"></div>
+                <script>
+                    fetch('navbar.html')
+                        .then(response => response.text())
+                        .then(data => {
+                        document.getElementById('navbar').innerHTML = data;
+                        });
+                    </script>
+
+                <nav>
+                    <ul>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="products.html" class="dropbtn">Products</a><div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="demos.html" class="dropbtn">Demos</a><div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="pricing.html" class="dropbtn">Pricing</a><div class="dropdown-content">
+                        </div>
+                    </li>
+                    </ul>
+
+                        <div class="header-buttons">
+                            <!-- Update these buttons -->
+                            <a href="signup.html" class="sign-up-btn">Sign Up</a>
+                            <a href="login.html" class="login-btn">Login</a>
+                        </div>
+
+                </nav>
+        </div>
+    
+    <!-- Header Section with Burger Icon -->
+<header class="header">
+    <div class="burger-icon" id="burgerIcon">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</header>
+
+<!-- Dropdown Menu -->
+<div class="dropdown-menu" id="dropdownMenu">
+    <!-- Search Input and Button -->
+<div class="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+    <button onclick="performSearch()">Search</button>
+</div>
+
+<!-- Modal for Search Results -->
+<div id="search-modal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+    <div class="modal-content" style="background-color: #4f0782; padding: 20px; border-radius: 8px; max-width: 800px; width: 80%; position: relative;">
+        <span onclick="closeModal()" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">&times;</span>
+        <h2>Search Results</h2>
+        <div id="search-results"></div>
+    </div>
+</div>
+</div>
+    </header>
+
+    <div class="page-container">
+        <div class="content-wrap">
+            <!-- Demos Page Content -->
+            <section class="container demo-section">
+                <h1>Privacy Policy</h1>
+                <p>Explore the various demos we have to offer for you to try out our AI capabilities.</p>
+                <!-- Add demo details here -->
+            </section>
+        </div>
+
+
+<div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
+    <!-- Here is where TIXAE Agents renders the widget. -->
+    <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
+</div>
+
+<!-- Remove 'defer' if you want widget to load faster (Will affect website loading) -->
+<script defer>
+    (function() {
+        window.VG_CONFIG = {
+            ID: "NzcljJJgdNozZiv", // YOUR AGENT ID
+            region: 'eu', // YOUR ACCOUNT REGION 
+            render: 'bottom-right', // can be 'full-width' or 'bottom-left' or 'bottom-right'
+            stylesheets: [
+                // Base TIXAE Agents CSS
+                "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css",
+                // Add your custom css stylesheets, Can also add relative URL ('/public/your-file.css)
+            ],
+            // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
+            // user: {
+            //     name: 'John Doe', // User's name
+            //     email: 'johndoe@gmail.com', // User's email
+            //     phone: '+1234567890', // User's phone number
+            // }
+            // Optional user data -- end
+            // **
+            // userID: 'USER_ID', // If you want to use your own user_id
+            // autostart: true, // Whether to autostart the chatbot with the proactive message
+        }
+        var VG_SCRIPT = document.createElement("script");
+        VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+        VG_SCRIPT.defer = true; // Remove 'defer' if you want widget to load faster (Will affect website loading)
+        document.body.appendChild(VG_SCRIPT);
+    })()
+</script>
+
+
+<style>
+    .footer-bottom a {
+        color: #6c757d; /* Change this to your desired color */
+        text-decoration: none; /* Removes the underline */
+    }
+
+    .footer-bottom a:hover {
+        text-decoration: underline; /* Optional: Adds underline on hover */
+    }
+</style>
+</head>
+<body>
+
+<!-- JavaScript placed directly in the HTML -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.getElementById("burgerIcon");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    burgerIcon.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("active");
+        burgerIcon.classList.toggle("open");
+    });
+});
+
+// On search.html page
+document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('query');
+        if (searchQuery) {
+            document.getElementById("search-results").textContent = `Results for "${searchQuery}"`;
+            // Use the searchQuery to fetch/display relevant results
+        }
+    });
+
+    function performSearch() {
+    const query = document.getElementById('search-input').value.trim().toLowerCase();
+    const resultsDiv = document.getElementById('search-results');
+    const modal = document.getElementById('search-modal');
+
+    if (query) {
+        // Simulate search results (replace with actual search logic)
+        const results = [ 
+            { title: "Example 1", link: "#1" },
+            { title: "Example 2", link: "#2" }
+        ].filter(item => item.title.toLowerCase().includes(query));
+
+        resultsDiv.innerHTML = '';
+
+        if (results.length) {
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.innerHTML = `<a href="${result.link}">${result.title}</a>`;
+                resultsDiv.appendChild(resultItem);
+            });
+        } else {
+            resultsDiv.innerHTML = `<p>No results found for "${query}".</p>`;
+        }
+
+        modal.style.display = 'flex'; // Show the modal
+    } else {
+        alert("Please enter a search term.");
+    }
+}
+
+function closeModal() {
+    document.getElementById('search-modal').style.display = 'none';
+}
+
+// Define the searchable content for the website
+const websiteContent = [
+    { title: "Home", description: "Welcome to our homepage", link: "index.html", keywords: "main welcome start" },
+    { title: "Products", description: "Browse our products", link: "products.html", keywords: "items catalog shopping" },
+    { title: "About Us", description: "Learn more about our company", link: "our-mission.html", keywords: "info team company" },
+    { title: "Contact Us", description: "Get in touch with us", link: "contact.html", keywords: "support help reach" },
+    { title: "Signup", description: "Signup for an account", link: "signup.html", keywords: "signup access account" },
+    { title: "Login", description: "Login to account", link: "login.html", keywords: "login access account" },
+    { title: "API Integration", description: "Allow Us to Help you Change the Game with API's", link: "API.html", keywords: "api integration demo" },
+    { title: "Packages", description: "Packages", link: "packages.html", keywords: "packages product services pricing" },
+    { title: "Demos", description: "Demonstrational Builds", link: "demos.html", keywords: "demos builds systems" },
+    { title: "Features", description: "Our featured companies", link: "features.html", keywords: "features tools brands" },
+    { title: "Support", description: "Need Support?", link: "support.html", keywords: "support assistance help" },
+    { title: "Terms of Service", description: "Our Terms of Service", link: "terms.html", keywords: "terms service" },
+    { title: "Privacy Policy", description: "Our Privacy Policy", link: "privacy.html", keywords: "privatcy policy" },
+    { title: "Pricing", description: "Pricing Tears for our Services", link: "pricing.html", keywords: "product packages pricing money payment" },
+    { title: "Voice Agents", description: "AI Voice Calling Agent", link: "voice-calling-agent.html", keywords: "cold calling phone call demo" },
+    { title: "AI Lead Generation", description: "Our AI Lead Generation System", link: "ai-lead-generation.html", keywords: "lead generation demo" },
+    { title: "AI Customer Support", description: "Start Optimizing your Customer Experience", link: "ai-customer-support.html", keywords: "customer support satisfaction demo" },
+    { title: "Automated Email Campagining", description: "Automated Email Campagining for incoming Leads", link: "automated-campaigns.html", keywords: "emails campaigns outreach demo" },
+    { title: "Automated Appointment Booking", description: "Start Automating your Client Scheduling Process", link: "auotmated-scheduling.html", keywords: "scheduling appointment calendar demo" },
+    // Add more items here with relevant keywords
+];
+
+// Perform the search based on user input
+function performSearch() {
+    const query = document.getElementById('search-input').value.trim().toLowerCase();
+    const resultsDiv = document.getElementById('search-results');
+    const modal = document.getElementById('search-modal');
+
+    // Clear previous results
+    resultsDiv.innerHTML = '';
+
+    if (query) {
+        // Filter websiteContent to find matches in title, description, or keywords
+        const results = websiteContent.filter(item => 
+            item.title.toLowerCase().includes(query) || 
+            item.description.toLowerCase().includes(query) || 
+            (item.keywords && item.keywords.toLowerCase().includes(query))
+        );
+
+        if (results.length) {
+            // Display each result as a clickable link
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.innerHTML = `<a href="${result.link}">${result.title}</a> - ${result.description}`;
+                resultsDiv.appendChild(resultItem);
+            });
+        } else {
+            // Show a message if no results are found
+            resultsDiv.innerHTML = `<p>No results found for "${query}".</p>`;
+        }
+
+        // Show the modal with search results
+        modal.style.display = 'flex';
+    } else {
+        alert("Please enter a search term.");
+    }
+}
+
+// Function to close the search modal
+function closeModal() {
+    document.getElementById('search-modal').style.display = 'none';
+}
+
+// Optional: Close the modal if the user clicks outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('search-modal');
+    if (event.target == modal) {
+        closeModal();
+    }
+};
+</script>
+
+<div class="footer-bottom">
+    <span>Copyright © Fusion AI 2024 | All Rights Reserved |</span>
+    <a href="privacy.html" target="_blank">Privacy Policy</a> |
+    <a href="terms.html" target="_blank">Terms of Service</a>
+</div>
+
+</body>
+</html>
