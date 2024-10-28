@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fusion AI - Home</title>
+    <title>Responsive Burger Menu</title>
+    <link rel="stylesheet" href="css/style.css/style.css">
+    <link rel="stylesheet" href="css/style.css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page">
+    <div class="background-circle"></div>
+    <div class="page-container">
+        <div class="content-wrap">
+            <div id="navbar"></div>
+                <script>
+                    fetch('navbar.html')
+                        .then(response => response.text())
+                        .then(data => {
+                        document.getElementById('navbar').innerHTML = data;
+                        });
+                    </script>
+
+                <nav>
+                    <ul>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="products.html" class="dropbtn">Products</a><div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="demos.html" class="dropbtn">Demos</a><div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="pricing.html" class="dropbtn">Pricing</a><div class="dropdown-content">
+                        </div>
+                    </li>
+                    </ul>
+
+                        <div class="header-buttons">
+                            <!-- Update these buttons -->
+                            <a href="signup.html" class="sign-up-btn">Sign Up</a>
+                            <a href="login.html" class="login-btn">Login</a>
+                        </div>
+
+                </nav>
+        </div>
+    
+    <!-- Header Section with Burger Icon -->
+<header class="header">
+    <div class="burger-icon" id="burgerIcon">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</header>
+
+<!-- Dropdown Menu -->
+<div class="dropdown-menu" id="dropdownMenu">
+    <!-- Search Input and Button -->
+<div class="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+    <button onclick="performSearch()">Search</button>
+</div>
+
+<!-- Modal for Search Results -->
+<div id="search-modal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+    <div class="modal-content" style="background-color: #4f0782; padding: 20px; border-radius: 8px; max-width: 800px; width: 80%; position: relative;">
+        <span onclick="closeModal()" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">&times;</span>
+        <h2>Search Results</h2>
+        <div id="search-results"></div>
+    </div>
+</div>
+</div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="page-container">
+                <div class="container">
+                <!-- Hero Section -->
+                <section class="hero" id="hero">
+                    <h1>Welcome To Fusion</h1>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/xeuMqulmMlQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p>We strive to provide you with the best and fastest growing AI Technology.</p>
+                    <div class="button-container">
+                        <a href="packages.html" class="solutions-btn">Solutions</a>
+                        <a href="https://cal.com/fusion-ai/fusion-ai" class="get-demo-btn">Get Demo</a>
+                    </div>
+                </section>
+
+                <div class="ai-sections-container">
+                    <!-- AI Integration Section -->
+                    <section class="ai-section ai-integration">
+                        <h2>Detailed AI Automation Systems Tailored to Your Business</h2>
+                        <p>Strategically integrate AI automation into your business model with a personalized implementation plan. Tailor your strategy to your specific industry, operational needs, and timeline to maximize efficiency.</p>
+                        <div class="ai-sub-section">
+                            <div class="ai-sub-section-header">
+                                <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/1-removebg-preview.png" alt="Icon 1" class="icon">
+                                <h3>Gain Valuable AI Resources</h3>
+                            </div>
+                            <p>Your AI integration plan will come with a curated selection of resources, such as automation frameworks, AI tools, guides, and best practices, helping you enhance operations and drive results.</p>
+                        </div>
+                        <div class="ai-sub-section">
+                            <div class="ai-sub-section-header">
+                                <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/2-removebg-preview.png" alt="Icon 2" class="icon">
+                                <h3>Stay Aligned with Business Goals</h3>
+                            </div>
+                            <p>We'll consider your business's operational rhythm, ensuring a balanced and gradual adoption. We'll work around your schedule to seamlessly distribute workload without compromising daily operations.</p>
+                        </div>
+                    </section>
+                
+                    <!-- AI Insights Section -->
+                    <section class="ai-section ai-insights">
+                        <h2>Get Insights on Your AI Implementation</h2>
+                        <p>Receive valuable feedback on your AI integration efforts by submitting your automation goals, performance metrics, and implementation details. Get a comprehensive analysis and a breakdown of your system's effectiveness.</p>
+                        <div class="ai-sub-section">
+                            <div class="ai-sub-section-header">
+                                <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/3-removebg-preview.png" alt="Icon 3" class="icon">
+                                <h3>Get a Mock Performance Review</h3>
+                            </div>
+                            <p>The AI Performance Analyzer will evaluate your business's AI integration based on your key metrics and industry benchmarks, providing a detailed mock assessment and highlighting areas where your system excels or needs improvement.</p>
+                        </div>
+                        <div class="ai-sub-section">
+                            <div class="ai-sub-section-header">
+                                <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/4-removebg-preview.png" alt="Icon 4" class="icon">
+                                <h3>Customize Evaluation Rigor</h3>
+                            </div>
+                            <p>Concerned about the level of scrutiny in your assessment? You can adjust the evaluation rigor of the AI Performance Analyzer to match the expectations of different business units, allowing for a more accurate preview of how AI will impact your operations.</p>
+                        </div>
+                    </section>
+                    <!-- AI Answers Section -->
+                    <section class="ai-section ai-answers">
+                        <h2>Get Answers Anytime, Anywhere</h2>
+                        <p>Leverage AI to address your business queries by scanning through vast datasets, reports, and industry insights. Gain valuable, data-driven answers to your questions, helping you make informed decisions.</p>
+                        <div class="ai-sub-section">
+                        <div class="ai-sub-section-header">
+                            <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/5-removebg-preview.png" alt="Answers Icon 1" class="icon">
+                            <h3>Extensive Database of Industry Data</h3>
+                        </div>
+                        <p>Have a specific or niche business question? No problem! Our AI taps into a comprehensive database of reports, market studies, and industry data to provide relevant answers tailored to your business's unique needs.</p>
+                        </div>
+                        <div class="ai-sub-section">
+                        <div class="ai-sub-section-header">
+                            <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/6-removebg-preview.png" alt="Answers Icon 2" class="icon">
+                            <h3>Summarized Insights</h3>
+                        </div>
+                        <p>Receive concise and actionable insights to ensure you're getting the most accurate and relevant information from the vast data. Streamline your decision-making process with AI-driven summaries and analysis.</p>
+                        </div>
+                    </section>
+
+                    <!-- AI Reports Section -->
+                    <section class="ai-section ai-reports">
+                        <h2>Generate Reports and Data Insights in an Instant</h2>
+                        <p>Quickly produce comprehensive reports, performance reviews, or insights by simply specifying the topic or uploading your business data. Streamline the process to review key metrics and prepare for important business decisions.</p>
+                        <div class="ai-sub-section">
+                        <div class="ai-sub-section-header">
+                            <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/7-removebg-preview.png" alt="Reports Icon 1" class="icon">
+                            <h3>Multiple Report Formats</h3>
+                        </div>
+                        <p>Customize the type of reports or insights you need. We offer various formats including comparative analysis, performance rankings, detailed breakdowns, projections, and data summaries to fit your business's needs.</p>
+                        </div>
+                            <div class="ai-sub-section">
+                                <div class="ai-sub-section-header">
+                                    <img src="/Users/braydensaunders-jones/Downloads/Website Icons/AI Section Icons/8-removebg-preview.png" alt="Reports Icon 2" class="icon">
+                                    <h3>Extensive Library of Data and Reports</h3>
+                            </div>
+                            <p>Browse through our extensive library of pre-generated reports and business insights to further enhance your strategy. Access trending data sets, industry benchmarks, and gain familiarity with different report formats to stay ahead of the competition.</p>
+                        </div>
+                    </section>
+                    </div>
+
+                <!-- Cal inline embed code begins -->
+                <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+                <script type="text/javascript">
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "fusion-ai", {origin:"https://cal.com"});
+
+                Cal.ns["fusion-ai"]("inline", {
+                    elementOrSelector:"#my-cal-inline",
+                    config: {"layout":"month_view","theme":"dark"},
+                    calLink: "fusion-ai/fusion-ai",
+                });
+
+                Cal.ns["fusion-ai"]("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#7a00ff"}},"hideEventTypeDetails":false,"layout":"month_view"});
+                </script>
+                <!-- Cal inline embed code ends -->
+
+
+                <div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
+                    <!-- Here is where TIXAE Agents renders the widget. -->
+                    <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
+                </div>
+                
+                <!-- Remove 'defer' if you want widget to load faster (Will affect website loading) -->
+                <script defer>
+                    (function() {
+                        window.VG_CONFIG = {
+                            ID: "NzcljJJgdNozZiv", // YOUR AGENT ID
+                            region: 'eu', // YOUR ACCOUNT REGION 
+                            render: 'bottom-right', // can be 'full-width' or 'bottom-left' or 'bottom-right'
+                            stylesheets: [
+                                // Base TIXAE Agents CSS
+                                "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css",
+                                // Add your custom css stylesheets, Can also add relative URL ('/public/your-file.css)
+                            ],
+                            // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
+                            // user: {
+                            //     name: 'John Doe', // User's name
+                            //     email: 'johndoe@gmail.com', // User's email
+                            //     phone: '+1234567890', // User's phone number
+                            // }
+                            // Optional user data -- end
+                            // **
+                            // userID: 'USER_ID', // If you want to use your own user_id
+                            // autostart: true, // Whether to autostart the chatbot with the proactive message
+                        }
+                        var VG_SCRIPT = document.createElement("script");
+                        VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+                        VG_SCRIPT.defer = true; // Remove 'defer' if you want widget to load faster (Will affect website loading)
+                        document.body.appendChild(VG_SCRIPT);
+                    })()
+                </script>
+        </div>
+        </div>
+    </div>
+</body>
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+
+<style>
+    .footer-bottom a {
+        color: #6c757d; /* Change this to your desired color */
+        text-decoration: none; /* Removes the underline */
+    }
+
+    .footer-bottom a:hover {
+        text-decoration: underline; /* Optional: Adds underline on hover */
+    }
+</style>
+<body>
+
+    <!-- JavaScript placed directly in the HTML -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.getElementById("burgerIcon");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    burgerIcon.addEventListener("click", function () {
+        dropdownMenu.classList.toggle("active");
+        burgerIcon.classList.toggle("open");
+    });
+});
+
+// On search.html page
+document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('query');
+        if (searchQuery) {
+            document.getElementById("search-results").textContent = `Results for "${searchQuery}"`;
+            // Use the searchQuery to fetch/display relevant results
+        }
+    });
+
+    function performSearch() {
+    const query = document.getElementById('search-input').value.trim().toLowerCase();
+    const resultsDiv = document.getElementById('search-results');
+    const modal = document.getElementById('search-modal');
+
+    if (query) {
+        // Simulate search results (replace with actual search logic)
+        const results = [ 
+            { title: "Example 1", link: "#1" },
+            { title: "Example 2", link: "#2" }
+        ].filter(item => item.title.toLowerCase().includes(query));
+
+        resultsDiv.innerHTML = '';
+
+        if (results.length) {
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.innerHTML = `<a href="${result.link}">${result.title}</a>`;
+                resultsDiv.appendChild(resultItem);
+            });
+        } else {
+            resultsDiv.innerHTML = `<p>No results found for "${query}".</p>`;
+        }
+
+        modal.style.display = 'flex'; // Show the modal
+    } else {
+        alert("Please enter a search term.");
+    }
+}
+
+function closeModal() {
+    document.getElementById('search-modal').style.display = 'none';
+}
+
+// Define the searchable content for the website
+const websiteContent = [
+    { title: "Home", description: "Welcome to our homepage", link: "index.html", keywords: "main welcome start" },
+    { title: "Products", description: "Browse our products", link: "products.html", keywords: "items catalog shopping" },
+    { title: "About Us", description: "Learn more about our company", link: "our-mission.html", keywords: "info team company" },
+    { title: "Contact Us", description: "Get in touch with us", link: "contact.html", keywords: "support help reach" },
+    { title: "Signup", description: "Signup for an account", link: "signup.html", keywords: "signup access account" },
+    { title: "Login", description: "Login to account", link: "login.html", keywords: "login access account" },
+    { title: "Packages", description: "Packages", link: "packages.html", keywords: "packages product services pricing" },
+    { title: "Demos", description: "Demonstrational Builds", link: "demos.html", keywords: "demos builds systems" },
+    { title: "Features", description: "Our featured companies", link: "features.html", keywords: "features tools brands" },
+    { title: "Support", description: "Need Support?", link: "support.html", keywords: "support assistance help" },
+    { title: "API Integration", description: "Allow Us to Help you Change the Game with API's", link: "API.html", keywords: "api integration demo" },
+    { title: "Terms of Service", description: "Our Terms of Service", link: "terms.html", keywords: "terms service" },
+    { title: "Privacy Policy", description: "Our Privacy Policy", link: "privacy.html", keywords: "privatcy policy" },
+    { title: "Pricing", description: "Pricing Tears for our Services", link: "pricing.html", keywords: "product packages pricing money payment" },
+    { title: "Voice Agents", description: "AI Voice Calling Agent", link: "voice-calling-agent.html", keywords: "cold calling phone call demo" },
+    { title: "AI Lead Generation", description: "Our AI Lead Generation System", link: "ai-lead-generation.html", keywords: "lead generation demo" },
+    { title: "AI Customer Support", description: "Start Optimizing your Customer Experience", link: "ai-customer-support.html", keywords: "customer support satisfaction demo" },
+    { title: "Automated Email Campagining", description: "Automated Email Campagining for incoming Leads", link: "automated-campaigns.html", keywords: "emails campaigns outreach demo" },
+    { title: "Automated Appointment Booking", description: "Start Automating your Client Scheduling Process", link: "auotmated-scheduling.html", keywords: "scheduling appointment calendar demo" },
+    // Add more items here with relevant keywords
+];
+
+// Perform the search based on user input
+function performSearch() {
+    const query = document.getElementById('search-input').value.trim().toLowerCase();
+    const resultsDiv = document.getElementById('search-results');
+    const modal = document.getElementById('search-modal');
+
+    // Clear previous results
+    resultsDiv.innerHTML = '';
+
+    if (query) {
+        // Filter websiteContent to find matches in title, description, or keywords
+        const results = websiteContent.filter(item => 
+            item.title.toLowerCase().includes(query) || 
+            item.description.toLowerCase().includes(query) || 
+            (item.keywords && item.keywords.toLowerCase().includes(query))
+        );
+
+        if (results.length) {
+            // Display each result as a clickable link
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.innerHTML = `<a href="${result.link}">${result.title}</a> - ${result.description}`;
+                resultsDiv.appendChild(resultItem);
+            });
+        } else {
+            // Show a message if no results are found
+            resultsDiv.innerHTML = `<p>No results found for "${query}".</p>`;
+        }
+
+        // Show the modal with search results
+        modal.style.display = 'flex';
+    } else {
+        alert("Please enter a search term.");
+    }
+}
+
+// Function to close the search modal
+function closeModal() {
+    document.getElementById('search-modal').style.display = 'none';
+}
+
+// Optional: Close the modal if the user clicks outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('search-modal');
+    if (event.target == modal) {
+        closeModal();
+    }
+};
+</script>
+
+<div class="footer-bottom">
+    <span>Copyright © Fusion AI 2024 | All Rights Reserved |</span>
+    <a href="privacy.html" target="_blank">Privacy Policy</a> |
+    <a href="terms.html" target="_blank">Terms of Service</a>
+</div>
+
+</body>
+</html>
